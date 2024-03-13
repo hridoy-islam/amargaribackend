@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const carWashValidationSchema = z.object({
+export const consultancyValidationSchema = z.object({
   body: z.object({
     name: z.string(),
     email: z.string(),
@@ -17,9 +17,7 @@ export const carWashValidationSchema = z.object({
     ]),
     brand: z.string(),
     model: z.string(),
-    carYear: z.string(),
-    servicePackage: z.string(),
-    address: z.string(),
+    carYear: z.number(),
     message: z.string(),
     time: z.string(),
     date: z.string(),

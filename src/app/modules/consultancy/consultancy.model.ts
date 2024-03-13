@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { Schema, model } from "mongoose";
-import { TcarWash } from "./carWash.interface";
+import { TConsultancy } from "./consultancy.interface";
 
-const carWashSchema = new Schema<TcarWash>(
+const consultancySchema = new Schema<TConsultancy>(
   {
     name: {
       type: String,
@@ -26,8 +26,6 @@ const carWashSchema = new Schema<TcarWash>(
     carYear: {
       type: Number,
     },
-    servicePackage: { type: String },
-    address: { type: String },
     message: { type: String },
     time: { type: String },
     date: { type: String },
@@ -46,4 +44,7 @@ const carWashSchema = new Schema<TcarWash>(
   }
 );
 
-export const CarWash = model<TcarWash>("CarWash", carWashSchema);
+export const Consultancy = model<TConsultancy>(
+  "Consultancy",
+  consultancySchema
+);

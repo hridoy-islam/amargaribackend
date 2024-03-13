@@ -1,0 +1,36 @@
+import { z } from "zod";
+
+export const carsValidationSchema = z.object({
+  body: z.object({
+    name: z.string(),
+    title: z.string(),
+    brand: z.string(),
+    edition: z.string(),
+    model: z.string(),
+    registration_year: z.number(),
+    production_year: z.number(),
+    condition: z.string(),
+    transmition: z.string(),
+    fuelType: z.string().array(),
+    engine_capacity: z.number(),
+    kilometer: z.number(),
+    details: z.string(),
+    gallery: z.string().array(),
+    price: z.number(),
+    bodyType: z.enum([
+      "Saloon",
+      "SUV",
+      "MPV",
+      "Hatchback",
+      "Estate",
+      "Coupe",
+      "Sports",
+      "Convertible",
+    ]),
+    phone: z.string(),
+    district: z.string(),
+    upazila: z.string(),
+    userid: z.string(),
+    status: z.enum(["pending", "approve", "sold"]),
+  }),
+});

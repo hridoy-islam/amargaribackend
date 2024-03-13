@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Types } from "mongoose";
 
-export interface TcarWash {
+export interface TConsultancy {
   _id: Types.ObjectId;
   name: string;
   email: string;
@@ -18,8 +18,6 @@ export interface TcarWash {
   brand: string;
   model: string;
   carYear: number;
-  servicePackage: string;
-  address: string;
   message: string;
   time: string;
   date: string;
