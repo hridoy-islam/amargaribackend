@@ -5,28 +5,18 @@ export interface TCars {
   _id: Types.ObjectId;
   title: string;
   brand: string;
-  edition: string;
+  color: string;
   model: string;
-  registration_year: number;
-  production_year: number;
+  registration_year: string;
+  production_year: string;
   condition: string;
   transmition: string;
   fuelType: string[];
-  engine_capacity: number;
-  kilometer: number;
+  engine_capacity: string;
+  kilometer: string;
   details: string;
   gallery: string[];
-  price: number;
-  bodyType:
-    | "Saloon"
-    | "SUV"
-    | "MPV"
-    | "Hatchback"
-    | "Estate"
-    | "Coupe"
-    | "Sports"
-    | "Convertible";
-
+  price: string;
   phone: string;
   district: string;
   upazila: string;

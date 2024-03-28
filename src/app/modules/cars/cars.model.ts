@@ -11,17 +11,17 @@ const carsSchema = new Schema<TCars>(
     brand: {
       type: String,
     },
-    edition: {
+    color: {
       type: String,
     },
     model: {
       type: String,
     },
     registration_year: {
-      type: Number,
+      type: String,
     },
     production_year: {
-      type: Number,
+      type: String,
     },
     condition: {
       type: String,
@@ -33,10 +33,10 @@ const carsSchema = new Schema<TCars>(
       type: [],
     },
     engine_capacity: {
-      type: Number,
+      type: String,
     },
     kilometer: {
-      type: Number,
+      type: String,
     },
     details: {
       type: String,
@@ -45,12 +45,7 @@ const carsSchema = new Schema<TCars>(
       type: [],
     },
     price: {
-      type: Number,
-    },
-
-    bodyType: {
       type: String,
-      required: true,
     },
     phone: { type: String, required: true },
     district: {

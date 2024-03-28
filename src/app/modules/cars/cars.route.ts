@@ -16,4 +16,4 @@ router.post(
 );
 router.patch("/:id", auth("admin"), CarsControllers.updateCars);
 
-export const UserRoutes = router;
+export const CarRoutes = router;

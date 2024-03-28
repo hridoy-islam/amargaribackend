@@ -11,6 +11,7 @@ import { sendEmail } from "../../utils/sendEmail";
 const checkLogin = async (payload: TLogin) => {
   try {
     const foundUser = await User.isUserExists(payload.phone);
+    console.log(foundUser);
     if (!foundUser) {
       throw new AppError(httpStatus.NOT_FOUND, "Login Detials is not correct");
     }
