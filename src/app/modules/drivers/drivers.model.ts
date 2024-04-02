@@ -15,7 +15,7 @@ const driverSchema = new Schema<TDriver>(
       type: [],
     },
     bluebook: {
-      type: String,
+      type: [],
     },
     car: {
       type: String,

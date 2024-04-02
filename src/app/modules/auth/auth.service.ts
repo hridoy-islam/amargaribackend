@@ -30,6 +30,8 @@ const checkLogin = async (payload: TLogin) => {
       {
         _id: foundUser._id?.toString(),
         email: foundUser?.email,
+        phone: foundUser?.phone,
+        name: foundUser?.name,
         role: foundUser?.role,
       },
       `${config.jwt_access_secret}`,

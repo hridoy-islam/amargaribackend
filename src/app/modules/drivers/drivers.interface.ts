@@ -6,7 +6,7 @@ export interface TDriver {
   name: string;
   phone: string;
   license: string[];
-  bluebook: string;
+  bluebook: string[];
   car: string;
   district: string;
   upazila: string;
