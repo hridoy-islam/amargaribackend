@@ -33,9 +33,27 @@ const updateDriverIntoDB = async (id: string, payload: Partial<TDriver>) => {
   return result;
 };
 
-const createDriverIntoDB = async (payload: TDriver) => {
-  const result = await Drivers.create(payload);
-  return result;
+const createDriverIntoDB = async (files: any, payload: TDriver) => {
+  try {
+    const { name, phone, car, division, district, upazila } = payload;
+    const { licenseFront, licenseBack, bluebookFront, bluebookBack } = files;
+    const driverData = {
+      name,
+      phone,
+      car,
+      division,
+      district,
+      upazila,
+      licenseFront: licenseFront[0].filename,
+      licenseBack: licenseBack[0].filename,
+      bluebookFront: bluebookFront[0].filename,
+      bluebookBack: bluebookBack[0].filename,
+    };
+    const result = await Drivers.create(driverData);
+    return result;
+  } catch (error) {
+    throw new Error("Something wrong");
+  }
 };
 
 export const DriversServices = {

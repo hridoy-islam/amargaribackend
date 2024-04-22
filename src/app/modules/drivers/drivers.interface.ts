@@ -5,9 +5,12 @@ export interface TDriver {
   _id: Types.ObjectId;
   name: string;
   phone: string;
-  license: string[];
-  bluebook: string[];
+  licenseFront?: string;
+  licenseBack?: string;
+  bluebookFront?: string;
+  bluebookBack?: string;
   car: string;
+  division: string;
   district: string;
   upazila: string;
   isDeleted: boolean;

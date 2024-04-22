@@ -36,7 +36,7 @@ const updateDriver = catchAsync(async (req, res) => {
 });
 
 const createDriver = catchAsync(async (req, res) => {
-  const result = await DriversServices.createDriverIntoDB(req.body);
+  const result = await DriversServices.createDriverIntoDB(req.files, req.body);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

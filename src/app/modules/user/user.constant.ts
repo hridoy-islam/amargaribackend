@@ -4,3 +4,5 @@ export const USER_ROLE = {
 } as const;
 
 export const UserStatus = ["block", "active"];
+
+export const UserSearchableFields = ["phone"];

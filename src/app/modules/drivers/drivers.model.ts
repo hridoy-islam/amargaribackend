@@ -11,13 +11,22 @@ const driverSchema = new Schema<TDriver>(
     phone: {
       type: String,
     },
-    license: {
-      type: [],
+    licenseFront: {
+      type: String,
     },
-    bluebook: {
-      type: [],
+    licenseBack: {
+      type: String,
+    },
+    bluebookFront: {
+      type: String,
+    },
+    bluebookBack: {
+      type: String,
     },
     car: {
+      type: String,
+    },
+    division: {
       type: String,
     },
     district: {
