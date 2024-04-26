@@ -48,6 +48,9 @@ const carsSchema = new Schema<TCars>(
       type: String,
     },
     phone: { type: String, required: true },
+    division: {
+      type: String,
+    },
     district: {
       type: String,
     },

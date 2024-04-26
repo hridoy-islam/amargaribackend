@@ -1,9 +1,11 @@
 import QueryBuilder from "../../builder/QueryBuilder";
+import { driverSearchableFields } from "./drivers.constant";
 import { TDriver } from "./drivers.interface";
 import { Drivers } from "./drivers.model";
 
 const getAllDriversFromDB = async (query: Record<string, unknown>) => {
   const driversQuery = new QueryBuilder(Drivers.find(), query)
+    .search(driverSearchableFields)
     .filter()
     .sort()
     .paginate()

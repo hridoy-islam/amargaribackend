@@ -1,9 +1,11 @@
 import QueryBuilder from "../../builder/QueryBuilder";
 import { Cars } from "./cars.model";
 import { TCars } from "./cars.interface";
+import { carSearchableFields } from "./car.constant";
 
 const getAllCarsFromDB = async (query: Record<string, unknown>) => {
   const carsQuery = new QueryBuilder(Cars.find(), query)
+    .search(carSearchableFields)
     .filter()
     .sort()
     .paginate()
