@@ -12,12 +12,6 @@ router.get("/:id", DriversControllers.getSingleDriver);
 router.post(
   "/",
   auth("admin"),
-  upload.fields([
-    { name: "licenseFront", maxCount: 1 },
-    { name: "licenseBack", maxCount: 1 },
-    { name: "bluebookFront", maxCount: 1 },
-    { name: "bluebookBack", maxCount: 1 },
-  ]),
   validateRequest(driversValidationSchema),
   DriversControllers.createDriver
 );
